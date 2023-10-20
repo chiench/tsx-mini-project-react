@@ -1,0 +1,130 @@
+
+@import "antd.reset";
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#root,
+#root > div {
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.full-height {
+  height: 100%;
+}
+.full-width {
+  width: 100%;
+}
+.loadingx:before {
+  position: absolute;
+  content: "";
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.28571429rem;
+  z-index: 100;
+}
+
+// scroll bar
+html *::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(22, 24, 35, 0.34);
+  background-color: rgba(22, 24, 35, 0.34);
+}
+html *::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: #fff;
+}
+
+.loadingx:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  margin: -1.5em 0em 0em -1.5em;
+  width: 3em;
+  height: 3em;
+  -webkit-animation: segment-spin 0.6s linear;
+  animation: segment-spin 0.6s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 500rem;
+  border-color: #223088 rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 0.2em;
+  box-shadow: 0px 0px 0px 1px transparent;
+  visibility: visible;
+  z-index: 101;
+}
+.base-input {
+  background: white;
+  input {
+    background: white;
+  }
+}
+@-webkit-keyframes segment-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes segment-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .set-height {
+    height: 35px;
+  }
+  .login-title {
+    padding: 5px 0;
+    font-size: 15vh;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .set-height {
+    height: 49px;
+  }
+  .login-title {
+    padding: 15px;
+  }
+}

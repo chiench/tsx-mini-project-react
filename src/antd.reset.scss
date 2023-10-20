@@ -1,0 +1,40 @@
+.ant-layout-header {
+    padding: 0;
+    background: white;
+  }
+  .ant-menu-light.ant-menu-horizontal {
+    .ant-menu-item-selected {
+      .ant-menu-title-content {
+        color: #f3c309;
+      }
+    }
+    .ant-menu-title-content {
+      font-weight: 700;
+      color: white;
+      font-size: 20px;
+    }
+    .ant-menu-item::after {
+      display: none;
+    }
+    .ant-menu-item-selected::after {
+      display: none;
+    }
+    .ant-menu-item:hover::after {
+      display: none;
+    }
+  }
+  
+  .ant-upload-hint {
+    padding: 0 5px;
+  }
+  .danh_sach_sv{
+    .ant-table-container{
+      min-height: 660px;
+    }
+    .ant-table-body{
+      &::-webkit-scrollbar{
+        display: none;
+      }
+    }
+  }
+  
